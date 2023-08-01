@@ -1,0 +1,18 @@
+Em uma inscrição, o usuário informou os seguintes dados:
+
+- Nome: José Almeida da Silva
+- CPF: 12345678900
+- RG: 9517530
+- Altura: 1,78
+- Endereço: Rua A, 380 – Centro – Recife/PE
+
+No algoritmo, descreva como será:
+1. A proposta das variáveis;
+2. Elaborada a declaração das variáveis;
+3. Utilizado o comando de atribuição.
+
+var nome <- "José Almeida da Silva": tipo carácter. E var pôs seu nome pode mudar.
+const CPF <- '12345678900': tipo carácter ou inteiro. E constante pôs seu CPF é único.
+const RG <- 9517530: tipo carácter ou inteiro. E constante pôs seu RG é único.
+const altura <- 1,78: tipo real. Pode ser quanto var ou constante.
+var endereço <- 'Rua A, 380 – Centro – Recife/PE': tipo carácter. E var pôs seu endereço pode mudar.

@@ -1,0 +1,40 @@
+/* 
+Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021. A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou completará, no ano atual (2023).
+
+Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.
+
+*/
+
+const prompt = require("prompt-sync")();
+const colors = require('@colors/colors');
+const data = new Date();
+
+function anoNascimento(ano){
+    while(true){
+        if(Number(ano) >= 1922 && Number(ano) < data.getFullYear() && !isNaN(ano) && ano.length === 4){
+            return ano;
+        }else{
+            console.log("Ano de nascimento está incorreto, Tente novamento!".red);
+            ano = prompt(`informe o ano do seu nascimento entre [1922 e ${data.getFullYear() - 1}]:`);
+        }
+
+    }
+}
+function iniciar(){
+    
+    while(true){
+        try{
+            const nomeCompleto = prompt("inisira seu nome completo: ".green);
+            const ano_nascimento = prompt(`informe o ano do seu nascimento entre [1922 e ${data.getFullYear() - 1}]:`);
+            const anoVerificado = anoNascimento(ano_nascimento);
+            const age = data.getFullYear() - Number(anoVerificado);
+
+            console.log(`${nomeCompleto} no ano de ${data.getFullYear()}, você completou ou completará ${age} anos.`);
+            break;
+        }catch(err){
+            console.log("Ocorreu um erro. tente novament.");
+        }
+    }
+}
+
+iniciar();

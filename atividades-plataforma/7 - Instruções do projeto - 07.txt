@@ -1,0 +1,28 @@
+Um aluno do ensino fundamental precisa fazer como tarefa de casa a tabuada de alguns números inteiros, 
+como nos exemplos em anexo.
+
+Para ajudar esse aluno, você deve elaborar um algoritmo que solicite que seja digitado um número inteiro 
+e que no final imprima o resultado da tabuada desse número.
+
+programa {
+    inteiro numero_user, cont
+	funcao inicio() {
+        
+        
+        escreva("Qual tabuada deseja ver? 2, 5, 7, 9")
+        escreva("\n:")
+        leia(numero_user)
+        
+        enquanto (numero_user < 1){
+            escreva("Número precisar ser maior ou igual a 1.")
+            escreva("\n", ":")
+            leia(numero_user)
+            limpa()
+        }
+        escreva("TABUADA DO ", numero_user, "\n")
+        para (cont=0; cont <= 10; cont++){
+            escreva(numero_user, " X ", cont, " = ", numero_user * cont, "\n")
+        }   
+	}
+}
+

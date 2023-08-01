@@ -1,0 +1,57 @@
+const prompt = require("prompt-sync")();
+const colors = require('@colors/colors');
+
+function isValide(escolha){
+    if(escolha.toLowerCase() === 's') return false
+    return true;
+}
+function votacao(){
+    let controle = true;
+    const candidatos = [
+        { nome: "Candidato X", votos: 0 },
+        { nome: "Candidato Y", votos: 0 },
+        { nome: "Candidato Z", votos: 0 },
+        { nome: "Branco", votos: 0 },
+        { nome: "Nulo", votos: 0 },
+      ];
+
+    while(controle){
+        console.log(`
+            [1] - Canditado X
+            [2] - Candidato Y
+            [3] - Canditato Z
+            [4] - em branco
+        `);
+        
+        let votar = prompt("Escolha seu candidato: ".green);
+        if(isNaN(votar)){
+            console.log("MENSAGEM: votar novamente.".red);
+            continue;
+        }
+        switch (Number(votar)) {
+            case 1:
+              candidatos[0].votos += 1;
+              break;
+            case 2:
+              candidatos[1].votos += 1;
+              break;
+            case 3:
+              candidatos[2].votos += 1;
+              break;
+            case 4:
+              candidatos[3].votos += 1;
+              break;
+            default:
+              candidatos[4].votos += 1;
+              break;
+          }
+        const repetir = prompt("Deseja finalizar a votação? [s/n] :".yellow);
+        controle = isValide(repetir);
+        if(!controle){
+            const arr = candidatos.sort((a, b) => b.votos - a.votos);
+            console.log(arr);
+        }
+    }
+
+}
+votacao();
