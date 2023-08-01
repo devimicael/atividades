@@ -1,0 +1,63 @@
+Elabore um algoritmo que representa um cadastro. Ele deve ler os seguintes dados fornecidos pelo usuário:
+
+- Nome
+- Endereço
+- Cidade
+- CPF
+- RG
+- Idade
+- Nome do pai
+- Nome da mãe
+- Peso
+- Renda bruta
+
+Apresente as informações solicitadas no final do cadastro.
+
+programa
+ {
+	
+        // variaveis
+	cadeia nome, endereco, cidade, cpf, rg,nome_pai, nome_mae
+	inteiro idade
+	real peso, renda_bruta
+
+funcao inicio() {
+	 escreva("Cadastro:")
+	 escreva("")
+
+	 escreva("Informe seu nome: ")
+	 leia(nome)
+	 escreva("Informe sua idade: ")
+	 leia(idade)
+	 escreva("Informe seu peso: ")
+	 leia(peso)
+	 escreva("Renda bruta: ")
+	 leia(renda_bruta)
+	 escreva("Informe seu CPF: ")
+	 leia(cpf)
+	 escreva("Informe seu RG: ")
+	 leia(rg)
+	 escreva("Informe seu endereço: ")
+	 leia(endereco)
+	 escreva("Informe sua cidade: ")
+	 leia(cidade)
+	 escreva("Nome do pai: ")
+	 leia(nome_pai)
+	 escreva("Nome da mãe: ")
+	 leia(nome_mae)
+
+ 	 escreva("")
+ 	 escreva("Dados cadastrados:")
+	 escreva("")
+	 escreva("Nome: ", nome)
+ 	 escreva("Idade: ", idade)
+ 	 escreva("Endereço: ", endereco)
+ 	 escreva("N.CPF: ", cpf)
+ 	 escreva("N.RG: ", rg)
+ 	 escreva("Peso: ", peso)
+ 	 escreva("Renda bruta: ", renda_bruta)
+ 	 escreva("Nome do PAI: ", nome_pai)
+ 	 escreva("Nome da MÃE: ", nome_mae)
+  }
+}
+
