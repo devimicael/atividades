@@ -5,7 +5,6 @@ class Pessoa {
         this.proximo = null;
     }
 }
-
 class ListPessoa {
     constructor(){
         this.cabeca = null;
