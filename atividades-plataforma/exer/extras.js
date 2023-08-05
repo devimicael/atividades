@@ -8,7 +8,7 @@ const desafio1 = [
     ["Lúcia", [7.0, 3.5, 9.0]],
     ["PEdro", [8.6, 7.3, 8.8]],
 ];
-
+/* 
 for(let i in desafio1){
     let soma = 0;
     for(let j of desafio1[i][1]){
@@ -17,3 +17,4 @@ for(let i in desafio1){
     soma = soma / desafio1.length;
     console.log(`Nome:${desafio1[i][0]} | Média:${soma.toFixed(1)}`);
 }
+*/
